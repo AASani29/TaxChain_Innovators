@@ -61,13 +61,7 @@ npm run dev
 
 ---
 
-## Deployment
 
-### Live Demo
-Deployed with (render.com)
-[Authentication](https://authentication-2-tzt5.onrender.com/)
-
----
 
 ## Notes
 ```bash
