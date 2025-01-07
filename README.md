@@ -63,9 +63,15 @@ npm run dev
 
 
 
-## Notes
+## Admin Role Setup
+
+### Automatic Admin Creation
+By default, an admin account is created automatically when the backend starts.
+
+**Default Admin Credentials:**
 ```bash
-- Make sure to replace sensitive information such as API keys and database credentials in the `.env` files before deploying to production.
-- For additional help, refer to the documentation or contact the project maintainer.
+Email: admin@admin.com
+Password: admin
+
 ```
 
