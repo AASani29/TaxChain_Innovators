@@ -19,28 +19,35 @@ export default function SignIn() {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      dispatch(signInStart());
-      const res = await fetch("/api/auth/signin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await res.json();
-      if (data.success === false) {
-        dispatch(signInFailure(data));
-        return;
-      }
-      dispatch(signInSuccess(data));
-      navigate("/home");
-    } catch (error) {
-      dispatch(signInFailure(error));
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    dispatch(signInStart());
+    const res = await fetch("/api/auth/signin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const data = await res.json();
+
+    if (data.success === false) {
+      dispatch(signInFailure(data));
+      return;
     }
-  };
+    dispatch(signInSuccess(data));
+
+    // Redirect based on role
+    if (data.role === "admin") {
+      navigate("/admindashboard");
+    } else {
+      navigate("/home");
+    }
+  } catch (error) {
+    dispatch(signInFailure(error));
+  }
+};
 
 
   return (

@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
   {
@@ -21,9 +21,13 @@ const userSchema = new mongoose.Schema(
       default:
         'https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg',
     },
-    
+    role: {
+      type: String,
+      enum: ['user', 'admin'], // Only "user" or "admin" allowed
+      default: 'user', // Default role is "user"
+    },
   },
-  { timestamps: true } // Automatically add createdAt and updatedAt fields
+  { timestamps: true }
 );
 
 const User = mongoose.model('User', userSchema);

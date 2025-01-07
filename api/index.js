@@ -5,8 +5,9 @@ import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import User from './models/user.model.js';
 
-
+import bcryptjs from 'bcryptjs';
 
 
 // Load environment variables
@@ -26,6 +27,7 @@ mongoose
   .connect(process.env.MONGO, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
+    createAdminUser();
   })
   .catch((err) => {
     console.error('Failed to connect to MongoDB:', err.message);
@@ -60,7 +62,26 @@ app.use((err, req, res, next) => {
   });
 });
 
-
+const createAdminUser = async () => {
+  try {
+    const existingAdmin = await User.findOne({ email: 'admin@admin.com', role: 'admin' });
+    if (!existingAdmin) {
+      const hashedPassword = bcryptjs.hashSync('admin', 10);
+      const adminUser = new User({
+        username: 'admin',
+        email: 'admin@admin.com',
+        password: hashedPassword,
+        role: 'admin',
+      });
+      await adminUser.save();
+      console.log('Admin user created successfully!');
+    } else {
+      console.log('Admin user already exists.');
+    }
+  } catch (err) {
+    console.error('Error creating admin user:', err);
+  }
+};
 
 // Start the server
 const PORT = process.env.PORT || 3000;

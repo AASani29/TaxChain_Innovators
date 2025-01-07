@@ -24,7 +24,10 @@ export const verifyToken = (req, res, next) => {
     }
 
     console.log("Decoded User:", user); // Debug log
-    req.user = user; // Attach the user to the request
+    req.user = {
+      id: user._id,
+      role: user.role,
+     } // Attach the user to the request
     next(); // Proceed to the next middleware
   });
 };

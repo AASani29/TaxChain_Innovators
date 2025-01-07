@@ -46,21 +46,43 @@ export const updateUser = async (req, res, next) => {
   }
 };
 
-// Delete user
 export const deleteUser = async (req, res, next) => {
-  // Check if the authenticated user matches the user being deleted
-  if (req.user.id !== req.params.id) {
-    return next(errorHandler(401, 'You can delete only your account!'));
-  }
   try {
-    // Delete the user from the database
-    await User.findByIdAndDelete(req.params.id);
-    res.status(200).json('User has been deleted...');
+    // Allow admins to delete any user
+    if (req.user.role === 'admin') {
+      const deletedUser = await User.findByIdAndDelete(req.params.id);
+      if (!deletedUser) {
+        return next(errorHandler(404, 'User not found!'));
+      }
+      return res.status(200).json({ message: 'User has been deleted by admin.' });
+    }
+
+    // Allow users to delete only their own account
+    if (req.user.id !== req.params.id) {
+      return next(errorHandler(401, 'You can delete only your own account!'));
+    }
+
+    // Proceed with deletion for the user
+    const deletedUser = await User.findByIdAndDelete(req.user.id);
+    if (!deletedUser) {
+      return next(errorHandler(404, 'User not found!'));
+    }
+    return res.status(200).json({ message: 'Your account has been deleted.' });
   } catch (error) {
-    // Pass any errors to the error handler middleware
-    next(error);
+    next(error); // Pass any errors to the middleware
   }
 };
 
 
+
+
+// Fetch all users (Admin only)
+export const getAllUsers = async (req, res, next) => {
+  try {
+    const users = await User.find({}, '-password'); // Exclude password field
+    res.status(200).json(users);
+  } catch (error) {
+    next(error);
+  }
+};
 
