@@ -8,6 +8,7 @@ import path from 'path';
 import User from './models/user.model.js';
 
 import bcryptjs from 'bcryptjs';
+import cors from 'cors'; 
 
 
 // Load environment variables
@@ -35,7 +36,7 @@ mongoose
   });
 
 // Middleware
-
+app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client', 'dist')));
