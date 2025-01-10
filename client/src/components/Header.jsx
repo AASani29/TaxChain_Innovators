@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 export default function Header() {
   const { currentUser } = useSelector((state) => state.user);
-  
 
   return (
     <header className="pl-10 pr-10 bg-cream text-white "
@@ -15,9 +14,47 @@ export default function Header() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex space-x-8">
-          
-          
+        <nav className="hidden md:flex space-x-12 ">
+          <div className="relative group pt-1">
+            <button className="font-bold text-teal-800 hover:text-gray-400 transition duration-300">
+              Services
+            </button>
+            <div className="absolute hidden group-hover:block bg-white shadow-lg rounded mt-2">
+              <Link
+                to="/service1"
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+              >
+                Service 1
+              </Link>
+              <Link
+                to="/service2"
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+              >
+                Service 2
+              </Link>
+              <Link
+                to="/service3"
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+              >
+                Service 3
+              </Link>
+            </div>
+          </div>
+
+          <Link
+            to="/about"
+            className="font-bold text-teal-800 hover:text-gray-800 transition duration-300 pt-1"
+          >
+            About
+          </Link>
+
+          <Link
+            to="/community"
+            className="font-bold text-teal-800 hover:text-gray-800 transition duration-300 pt-1"
+          >
+            Community
+          </Link>
+
           <Link
             to="/profile"
             className="flex items-center space-x-2 font-bold"
