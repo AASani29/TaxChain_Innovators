@@ -5,7 +5,7 @@ import SignUp from "./pages/SignUp";
 import Profile from "./pages/Profile";
 import PrivateRoute from "./components/PrivateRoute";
 import AdminDashboard from "./pages/AdminDashboard";
-
+import LandingPage from "./pages/LandingPage";
 
 export default function App() {
   return (
@@ -18,6 +18,7 @@ export default function App() {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/admindashboard" element={<AdminDashboard />} />
+        <Route path="/" element={<LandingPage />} />
 
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<Profile />} />
