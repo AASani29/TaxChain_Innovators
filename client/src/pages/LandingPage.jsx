@@ -142,24 +142,23 @@ const LandingPage = () => {
 </div>
 
 
-
-<section className="py-12 bg-teal-900  border-t-2 border-teal-900  px-10">
-  <div className="text-center mb-12 mt-4 ">
+<section className="py-12 bg-teal-900 border-t-2 border-teal-900 px-4 sm:px-6 lg:px-10">
+  <div className="text-center mb-12 mt-4">
     <h2 className="text-3xl font-bold text-[#f8f1d1]">OUR SERVICES</h2>
-    <p className="text-gray-400 mt-2">
+    <p className="text-gray-400 mt-2 px-4 sm:px-6 lg:px-8">
       Explore how our platform empowers you to make an impact through transparency and trust.
     </p>
   </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-10 px-4 ">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Service 1 */}
-    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl">
+    <div className="flex flex-col sm:flex-row items-center sm:items-start bg-[#f3e6c8] rounded-lg shadow-lg p-4 sm:p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
       <img
         src="clipart2830924.png"
         alt="Explore Projects"
-        className="w-16 h-16 rounded-md"
+        className="w-16 h-16 rounded-md mb-4 sm:mb-0"
       />
-      <div className="ml-4">
+      <div className="sm:ml-4 text-center sm:text-left">
         <h3 className="text-xl font-semibold text-teal-900">Explore Projects</h3>
         <p className="text-gray-600 mt-2 text-sm">
           Discover vetted rural development projects and choose where your contributions go.
@@ -168,13 +167,13 @@ const LandingPage = () => {
     </div>
 
     {/* Service 2 */}
-    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl">
+    <div className="flex flex-col sm:flex-row items-center sm:items-start bg-[#f3e6c8] rounded-lg shadow-lg p-4 sm:p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
       <img
         src="https://cdn-icons-png.freepik.com/512/6153/6153836.png"
         alt="Pay Tax"
-        className="w-16 h-16 rounded-md"
+        className="w-16 h-16 rounded-md mb-4 sm:mb-0"
       />
-      <div className="ml-4">
+      <div className="sm:ml-4 text-center sm:text-left">
         <h3 className="text-xl font-semibold text-teal-900">Pay Tax</h3>
         <p className="text-gray-600 mt-2 text-sm">
           Use our secure and user-friendly platform to pay taxes directly and easily.
@@ -183,13 +182,13 @@ const LandingPage = () => {
     </div>
 
     {/* Service 3 */}
-    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl">
+    <div className="flex flex-col sm:flex-row items-center sm:items-start bg-[#f3e6c8] rounded-lg shadow-lg p-4 sm:p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
       <img
         src="contribution.png"
         alt="View My Contributions"
-        className="w-16 h-16 rounded-md"
+        className="w-16 h-16 rounded-md mb-4 sm:mb-0"
       />
-      <div className="ml-4">
+      <div className="sm:ml-4 text-center sm:text-left">
         <h3 className="text-xl font-semibold text-teal-900">View Your Contributions</h3>
         <p className="text-gray-600 mt-2 text-sm">
           Track your contributions in real-time and see the impact you're making.
@@ -198,13 +197,13 @@ const LandingPage = () => {
     </div>
 
     {/* Service 4 */}
-    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl mb-12">
+    <div className="flex flex-col sm:flex-row items-center sm:items-start bg-[#f3e6c8] rounded-lg shadow-lg p-4 sm:p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
       <img
         src="https://www.pngplay.com/wp-content/uploads/6/Community-Logo-Background-PNG-Image.png"
         alt="Community Stories"
-        className="w-24 h-16 rounded-md"
+        className="w-24 h-16 rounded-md mb-4 sm:mb-0"
       />
-      <div className="ml-4">
+      <div className="sm:ml-4 text-center sm:text-left">
         <h3 className="text-xl font-semibold text-teal-900">Community Stories</h3>
         <p className="text-gray-600 mt-2 text-sm">
           Read inspiring stories of how contributions are transforming communities.
@@ -213,13 +212,13 @@ const LandingPage = () => {
     </div>
 
     {/* Service 5 */}
-    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl mb-12">
+    <div className="flex flex-col sm:flex-row items-center sm:items-start bg-[#f3e6c8] rounded-lg shadow-lg p-4 sm:p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
       <img
         src="pngegg.png"
         alt="Rewards Earned"
-        className="w-16 h-16 rounded-md"
+        className="w-16 h-16 rounded-md mb-4 sm:mb-0"
       />
-      <div className="ml-4">
+      <div className="sm:ml-4 text-center sm:text-left">
         <h3 className="text-xl font-semibold text-teal-900">Earn Rewards</h3>
         <p className="text-gray-600 mt-2 text-sm">
           Earn and redeem rewards for your contributions and active participation.
@@ -228,22 +227,23 @@ const LandingPage = () => {
     </div>
 
     {/* Service 6 */}
-    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl mb-12">
-  <img
-    src="https://cdn-icons-png.flaticon.com/512/17859/17859313.png"
-    alt="New Project Proposals"
-    className="w-16 h-16 rounded-md"
-  />
-  <div className="ml-4">
-    <h3 className="text-xl font-semibold text-teal-900">Vote for New Projects</h3>
-    <p className="text-gray-700 mt-2 text-sm">
-      Submit and support new project ideas to create meaningful change.
-    </p>
-  </div>
-</div>
-
+    <div className="flex flex-col sm:flex-row items-center sm:items-start bg-[#f3e6c8] rounded-lg shadow-lg p-4 sm:p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/17859/17859313.png"
+        alt="New Project Proposals"
+        className="w-16 h-16 rounded-md mb-4 sm:mb-0"
+      />
+      <div className="sm:ml-4 text-center sm:text-left">
+        <h3 className="text-xl font-semibold text-teal-900">Vote for New Projects</h3>
+        <p className="text-gray-700 mt-2 text-sm">
+          Submit and support new project ideas to create meaningful change.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
+
+
 
 <section className="py-12 bg-transparent border-t-2 border-teal-900">
   <div className="text-center mb-8">
