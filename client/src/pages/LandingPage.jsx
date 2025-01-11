@@ -88,7 +88,7 @@ const LandingPage = () => {
 
 
   
-<div className="relative shadow-lg rounded-lg overflow-hidden max-w-6xl mx-auto mt-24 px-4 mb-10">
+<div className="relative shadow-lg rounded-lg overflow-hidden max-w-6xl mx-auto mt-16 px-4 mb-16">
     
   <div className="relative flex flex-col md:flex-row items-center z-10 space-y-6 md:space-y-0">
     <div className="w-full md:w-1/2 p-4">
@@ -143,10 +143,10 @@ const LandingPage = () => {
 
 
 
-<section className="py-12 bg-[#f8f1d1]  border-t-2 border-teal-900 mb-10 px-10">
+<section className="py-12 bg-teal-900  border-t-2 border-teal-900  px-10">
   <div className="text-center mb-12 mt-4 ">
-    <h2 className="text-3xl font-bold text-teal-900">OUR SERVICES</h2>
-    <p className="text-gray-600 mt-2">
+    <h2 className="text-3xl font-bold text-[#f8f1d1]">OUR SERVICES</h2>
+    <p className="text-gray-400 mt-2">
       Explore how our platform empowers you to make an impact through transparency and trust.
     </p>
   </div>
@@ -198,7 +198,7 @@ const LandingPage = () => {
     </div>
 
     {/* Service 4 */}
-    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl">
+    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl mb-12">
       <img
         src="https://www.pngplay.com/wp-content/uploads/6/Community-Logo-Background-PNG-Image.png"
         alt="Community Stories"
@@ -213,7 +213,7 @@ const LandingPage = () => {
     </div>
 
     {/* Service 5 */}
-    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl">
+    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl mb-12">
       <img
         src="pngegg.png"
         alt="Rewards Earned"
@@ -228,7 +228,7 @@ const LandingPage = () => {
     </div>
 
     {/* Service 6 */}
-    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl">
+    <div className="flex items-start bg-[#f3e6c8] rounded-lg shadow-lg p-6 transform transition-transform duration-300 hover:scale-85 hover:shadow-2xl mb-12">
   <img
     src="https://cdn-icons-png.flaticon.com/512/17859/17859313.png"
     alt="New Project Proposals"
@@ -253,7 +253,7 @@ const LandingPage = () => {
     </p>
   </div>
   <div className="flex justify-center">
-    <div className="relative w-full max-w-lg">
+    <div className="relative w-full max-w-lg ">
       {/* Bangladesh Map */}
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Bangladesh_divisions_english.svg/738px-Bangladesh_divisions_english.svg.png"
@@ -261,7 +261,7 @@ const LandingPage = () => {
         className="w-full h-auto"
       />
       {/* Example Coverage Overlay (can be customized further) */}
-      <div className="absolute top-20 left-20 text-teal-900 bg-white bg-opacity-80 px-4 py-2 rounded-md shadow-lg">
+      <div className="absolute top-20 left-20 text-teal-900 bg-white bg-opacity-80 px-4 py-2 rounded-md shadow-lg ">
         <h3 className="text-lg font-semibold">Rangpur Region</h3>
         <p className="text-sm">Significant projects and tax contributions.</p>
       </div>
@@ -274,17 +274,17 @@ const LandingPage = () => {
 </section>
 
 
-<section className="py-12 bg-gradient-to-b from-[#e8dcc1] via-[#f8f1d1] to-[#e6d8b8] relative ">
+<section className="py-12 bg-teal-900 relative ">
  
 
   {/* Title */}
   <div className="text-center mb-16 relative z-10 ">
-    <h2 className="text-4xl font-bold text-teal-900">Your Stories</h2>
+    <h2 className="text-4xl font-bold text-[#f8f1d1]">Your Stories</h2>
   </div>
 
   {/* Arrow Buttons */}
   <button
-    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white rounded-full p-3 hover:bg-green-700 transition duration-300 shadow-lg"
+    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#f8f1d1] text-teal-900 rounded-full p-3 hover:bg-white transition duration-300 shadow-lg"
     aria-label="Previous Blogs"
   >
     <svg
@@ -304,7 +304,7 @@ const LandingPage = () => {
   </button>
 
   <button
-    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white rounded-full p-3 hover:bg-green-700 transition duration-300 shadow-lg"
+    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#f8f1d1] text-teal-900 rounded-full p-3 hover:bg-white transition duration-300 shadow-lg"
     aria-label="Next Blogs"
   >
     <svg
@@ -408,7 +408,7 @@ const LandingPage = () => {
   <div className="text-center mt-12 relative z-10 mb-10">
     <a
       href="#"
-      className="inline-flex items-center px-6 py-3 bg-teal-800 text-white font-semibold rounded-full hover:bg-green-700 transition duration-300"
+      className="inline-flex items-center px-6 py-3 bg-[#e8dcc1] text-teal-900 font-semibold rounded-full hover:bg-white transition duration-300"
     >
       SEE ALL BLOGS
       <svg
@@ -431,7 +431,7 @@ const LandingPage = () => {
 
 
 
-      <section className="bg-gradient-to-b from-teal-900 to-teal-800 text-white py-12 px-10">
+      <section className="bg-gradient-to-b from-[#e8dcc1] via-[#f8f1d1] to-[#e6d8b8] text-teal-900 py-12 px-10">
   <div className="container mx-auto px-6">
     {/* Contact and Map Section */}
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -439,37 +439,37 @@ const LandingPage = () => {
       <div>
         <h2 className="text-3xl font-bold mb-4">GET IN TOUCH</h2>
         <form className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 ">
             <input
               type="text"
               placeholder="First Name"
-              className="p-3 rounded-md border border-gray-300 w-full"
+              className="p-3 rounded-md border border-gray-300 w-full bg-gray-100"
             />
             <input
               type="text"
               placeholder="Last Name"
-              className="p-3 rounded-md border border-gray-300 w-full"
+              className="p-3 rounded-md border border-gray-300 w-full bg-gray-100"
             />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <input
               type="text"
               placeholder="Company"
-              className="p-3 rounded-md border border-gray-300 w-full"
+              className="p-3 rounded-md border border-gray-300 w-full bg-gray-100"
             />
             <input
               type="text"
               placeholder="Telephone"
-              className="p-3 rounded-md border border-gray-300 w-full"
+              className="p-3 rounded-md border border-gray-300 w-full bg-gray-100"
             />
           </div>
           <textarea
             placeholder="Message"
-            className="p-3 rounded-md border border-gray-300 w-full h-32"
+            className="p-3 rounded-md border border-gray-300 w-full h-32 bg-gray-100"
           ></textarea>
           <button
             type="submit"
-            className="bg-yellow-100 hover:bg-blue-700 text-teal-800 font-bold py-2 px-6 rounded-md"
+            className="bg-teal-900 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md"
           >
             SUBMIT
           </button>
@@ -522,18 +522,18 @@ const LandingPage = () => {
       </div>
 
       <div>
-        <h3 className="text-lg font-bold">Features</h3>
-        <ul className="mt-2 space-y-2 text-sm">
-          <li>Meditation & Relaxation</li>
-          <li>Recommendations</li>
-          <li>Community</li>
-          <li>Mood and Sleep Tracker</li>
-          <li>Expert Support</li>
+        <h3 className="text-lg font-bold ml-16">Features</h3>
+        <ul className="mt-2 space-y-2 ml-16 text-sm">
+          <li> Tax Payment</li>
+          <li>Explore Govt Projects</li>
+          <li>Allocate Tax</li>
+          <li>View Rewards</li>
+          <li>Vote for New Projects</li>
         </ul>
       </div>
       <div>
-        <h3 className="text-lg font-bold">Company</h3>
-        <ul className="mt-2 space-y-2 text-sm">
+        <h3 className="text-lg font-bold ml-12">Company</h3>
+        <ul className="mt-2 space-y-2 text-sm ml-12">
           <li>
             <a href="#" className="hover:text-gray-500">About Us</a>
           </li>
